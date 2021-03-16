@@ -83,7 +83,7 @@ public class LoadingShimmer: NSObject {
             for subview in view?.subviews ?? [] {
 
                 var defaultCoverblePath = UIBezierPath(roundedRect: subview.bounds, cornerRadius: subview.frame.size.height / 2.0)
-                if type(of: subview) === UILabel.self || type(of: subview) === UITextView.self {
+                if type(of: subview) === UILabel.self || type(of: subview) === UITextView.self || type(of: subview) === ShimmerBackgroundView.self {
                     defaultCoverblePath = UIBezierPath(roundedRect: subview.bounds, cornerRadius: 4)
                 }
                 let relativePath: UIBezierPath = defaultCoverblePath
